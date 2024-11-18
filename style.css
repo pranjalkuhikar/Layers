@@ -27,10 +27,17 @@ body {
   width: fit-content;
   border-radius: 2em;
 }
-.section1 nav .menu {
+.section1 nav .desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  opacity: 1;
+}
+.section1 nav .desktop .menu {
   display: flex;
 }
-.section1 nav .menu ul {
+.section1 nav .desktop .menu ul {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -38,24 +45,27 @@ body {
   font-weight: 500;
   list-style-type: none;
 }
-.section1 nav .btns {
+.section1 nav .desktop .btns {
   display: flex;
   align-items: center;
   gap: 2em;
 }
-.section1 nav .btns .login {
+.section1 nav .desktop .btns .login {
   border: 1px solid rgba(255, 255, 255, 0.3333333333);
   padding: 1em 1.5em;
   border-radius: 2em;
   cursor: pointer;
 }
-.section1 nav .btns .signup {
+.section1 nav .desktop .btns .signup {
   border: 1px solid;
   color: #000;
   background-color: #a3e635;
   padding: 1em 1.5em;
   border-radius: 2em;
   cursor: pointer;
+}
+.section1 nav .mobile {
+  display: none;
 }
 .section1 .hero {
   display: flex;
@@ -104,7 +114,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3333333333);
   padding: 0.5em 1em;
   border-radius: 2em;
-  width: 60%;
 }
 .section1 .hero .middle .btns input {
   all: unset;
@@ -291,4 +300,107 @@ body {
 .section3 .bottom .btn .text {
   font-size: 1em;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .section1 {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .section1 nav {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .section1 nav .desktop {
+    display: none;
+  }
+  .section1 nav .mobile {
+    display: block;
+    background-color: #fff;
+    opacity: 1;
+  }
+  .section1 .hero {
+    padding: 2em;
+  }
+  .section1 .hero .left {
+    display: none;
+  }
+  .section1 .hero .middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .section1 .hero .middle .title {
+    font-size: 4em;
+  }
+  .section1 .hero .middle .desc {
+    padding: 0;
+  }
+  .section1 .hero .middle .btns {
+    padding: 0 0.3em;
+  }
+  .section1 .hero .middle .btns input {
+    padding: 0em;
+  }
+  .section1 .hero .middle .btns .btn {
+    padding: 1em 2em;
+    white-space: nowrap;
+  }
+  .section1 .hero .right {
+    display: none;
+  }
+  .section1 .bottom .desc {
+    padding: 0.5em;
+  }
+  .section1 .bottom .img img {
+    display: none;
+  }
+  .section2 .middle,
+  .section3 .middle {
+    padding: 6em 2em;
+  }
+  .section2 .middle .shot,
+  .section3 .middle .shot {
+    font-size: 0.9em;
+  }
+  .section2 .middle .title,
+  .section3 .middle .title {
+    font-size: 2em;
+  }
+  .section3 .middle {
+    gap: 1.3em;
+  }
+  .section3 .top {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+  .section3 .top .box .ctrl {
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 0.5em;
+    padding: 0;
+  }
+  .section3 .top .box .text {
+    font-size: 2.3em;
+  }
+  .section3 .top .box .img .div {
+    display: none;
+  }
+  .section3 .top .box .img .title {
+    font-size: 5em;
+  }
+  .section3 .top .box .btm {
+    font-size: 0.9em;
+  }
+  .section3 .bottom {
+    padding: 0 2em;
+  }
 }/*# sourceMappingURL=style.css.map */
