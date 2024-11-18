@@ -110,8 +110,11 @@ body {
         border: 1px solid #ffffff55;
         padding: 0.5em 1em;
         border-radius: 2em;
+        width: 50%;
         input {
           all: unset;
+          min-width: 4em;
+          flex-grow: 1;
         }
         .btn {
           border: 1px solid;
@@ -120,6 +123,7 @@ body {
           padding: 1em 1.5em;
           border-radius: 2em;
           cursor: pointer;
+          flex-shrink: 0;
         }
       }
     }
@@ -348,14 +352,15 @@ body {
           padding: 0;
         }
         .btns {
-          padding: 0 0.3em;
+          padding: 0.3em 0.3em;
+          gap: 0.4em;
+          width: 100%;
 
           input {
             padding: 0em;
           }
           .btn {
             padding: 1em 2em;
-            white-space: nowrap;
           }
         }
       }
